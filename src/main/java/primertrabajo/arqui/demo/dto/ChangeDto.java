@@ -12,6 +12,7 @@ public class ChangeDto {
         this.to = to;
         this.amount = amount;
     }
+    public ChangeDto(){}
 
     public String getFrom() {
         return from;

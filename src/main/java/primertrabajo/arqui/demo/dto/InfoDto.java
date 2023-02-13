@@ -11,6 +11,7 @@ public class InfoDto {
         this.timestamp = timestamp;
         this.rate = rate;
     }
+    public InfoDto(){}
 
     public BigInteger getTimestamp() {
         return timestamp;

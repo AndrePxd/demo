@@ -1,5 +1,6 @@
 package primertrabajo.arqui.demo.bl;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
@@ -23,6 +24,11 @@ public class CurrencyBl {
         Response response = client.newCall(request).execute();
         String responseBody = response.body().string();
         System.out.println(responseBody);
-        return null;
+
+
+        ObjectMapper objectMapper = new ObjectMapper();
+        ApiDto apiDto = objectMapper.readValue(responseBody, ApiDto.class);
+        return apiDto;
     }
+
 }

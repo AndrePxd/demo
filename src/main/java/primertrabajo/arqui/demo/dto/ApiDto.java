@@ -16,6 +16,8 @@ public class ApiDto {
         this.date = date;
         this.result = result;
     }
+    public  ApiDto(){
+    }
 
     public boolean isSuccess() {
         return success;
